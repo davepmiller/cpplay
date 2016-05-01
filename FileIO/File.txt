@@ -1,0 +1,11 @@
+Name  Bc  Price
+Chips 01c $0.50
+Juice  02j  $1.5
+Chocolate 03c $1.00
+Pen 04p $0.20
+Backpack 05b $30.00
+Bag 06b $35.25
+Ball 07b $10.50
+Toy 08t $15.22
+Wi-Fi Router 09wr $40.00
+Generic HDMI cable 010hc $4.00
