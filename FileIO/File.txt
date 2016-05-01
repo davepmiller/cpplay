@@ -1,4 +1,3 @@
-Name  Bc  Price
 Chips 01c $0.50
 Juice  02j  $1.5
 Chocolate 03c $1.00

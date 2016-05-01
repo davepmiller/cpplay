@@ -5,16 +5,16 @@
 using namespace std;
 
 
-float getPrice( string inputLine )
+string getPrice( string inputLine )
 {
     auto position = inputLine.find( "$" );
 
     if( position <= inputLine.size() )
     {
-        return stod( inputLine.substr( position + 1 ) );
+        return inputLine.substr( position );
     }
 
-    return 0;
+    return {};
 }
 
 string getBarCode( string inputLine )
@@ -55,7 +55,7 @@ int main( int argc, char** argv )
         {
             auto price = getPrice( inputLine );
 
-            if( price != 0 )
+            if( ! price.empty() )
             {
                 if( getBarCode( inputLine ) == barcodeInput )
                 {
