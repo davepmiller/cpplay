@@ -7,50 +7,40 @@ using std::cout;
 using std::endl;
 
 
-bool isAPalinDrome( const string & stringToCheck )
-{
+bool is_a_palindrome( const string & stringToCheck ){
     return stringToCheck ==
             string{ stringToCheck.rbegin(), stringToCheck.rend() };
 }
 
 
-void printPalindrome( int index, const string & stringToPrint )
-{
+void print_palindrome( int index, const string & stringToPrint ){
     cout << index << ": " << stringToPrint << endl;
 }
 
 
-bool checkForNextPermutation( string & str )
-{
+bool check_for_next_permutation( string & str ){
     return next_permutation( str.begin(), str.end() );
 }
 
 
-void findPalindromes( string stringToCheck )
-{
+void find_palindromes( string stringToCheck ){
     auto palindromeNumber = 1;
 
-    do
-    {
-       if( isAPalinDrome( stringToCheck ) )
-       {
-           printPalindrome( palindromeNumber++, stringToCheck );
-       }
+    do{
+       if( is_a_palindrome( stringToCheck ) )
+           print_palindrome( palindromeNumber++, stringToCheck );
     }
-    while( checkForNextPermutation( stringToCheck) );
+    while( check_for_next_permutation( stringToCheck) );
 
     cout << endl;
 }
 
 
-int main( int argc, char * argv[] )
-{
+int main( int argc, char * argv[] ){
     cout << endl;
 
-    for( auto index = 1; index < argc; ++index )
-    {
+    for( auto index = 1; index < argc; ++index ){
         cout << argv[ index ] << ":" << endl;
-
-        findPalindromes( argv[ index ] );
+        find_palindromes( argv[ index ] );
     }
 }
