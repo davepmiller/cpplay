@@ -8,5 +8,5 @@ add_definitions(
 
 add_executable(
     ${PROJECT_NAME}
-    StripWhitespace.cpp
+    strip_whitespace.cpp
     )
