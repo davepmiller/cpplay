@@ -6,12 +6,13 @@
 #include <functional>
 #include <atomic>
 
+#include "manager_data.hpp"
+
 
 class Manager
 {
 public:
     Manager();
-    ~Manager();
 
     void launch_function_async(
             std::function<void(std::atomic_bool*)> function );
@@ -21,8 +22,7 @@ public:
     bool is_running() const;
 
 private:
-    std::vector<std::future<void>> futures_;
-    std::atomic_bool is_running_;
+    ManagerData data_;
 };
 
 #endif // MANAGER_HPP
